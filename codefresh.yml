@@ -20,16 +20,7 @@ steps:
       tag: '${{CF_BRANCH_TAG_NORMALIZED}}-${{CF_SHORT_REVISION}}'
       dockerfile: Dockerfile
     stage: package
-  deploy:
-    title: Storing Helm chart
-    type: helm
-    stage: deploy
-    working_directory: ./python-flask-sample-app
-    arguments:
-      action: push
-      chart_name: charts/python
-      helm_version: 3.0.2
-      kube_context: 'mydemoAkscluster@BizSpark Plus'
+
   DeployMyChart:
     type: helm
     stage: deploy
