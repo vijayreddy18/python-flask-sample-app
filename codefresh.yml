@@ -16,7 +16,7 @@ steps:
     type: build
     working_directory: ${{clone}}
     arguments:
-      image_name: my-flask-app
+      image_name: vijay31453/my-flask-app
       tag: '${{CF_BRANCH_TAG_NORMALIZED}}-${{CF_SHORT_REVISION}}'
       dockerfile: Dockerfile
     stage: package
